@@ -48,17 +48,21 @@ cascade_rcnn_hrnetv2p_w32.py-->线上最高map42+，
   首先产生一个测试集对应的testA.json文件，方便使用mmdet自带的测试管道进行测试，斩风大佬是产生一个json文件，命令如下：  
 
 	python tools/test.py waterconfigs/{your_config_file} {your_epoch_file} --json_out result/json_filename
-    python tools/json2sub.py --test_json result/json_filename --submit_file csv_filename.csv
+    python tools/json2sub.py
   *2*.自己的转换方法： 
     
 	python tools/test.py waterconfigs/{your_config_file} {your_epoch_file} --out result/pkl_filename.pkl  
     python tools/pkl2sub.py
+## Result Vision
+	python tools/pkl2vison.py # 将生成的可视化图片保存至result_vision文件夹下
+
+## 模型结果融合方案
+**参考链接**：https://github.com/ZFTurbo/Weighted-Boxes-Fusion
+	python tools/bbox2wbf2sub.py
 
 ## 这里贴出详细比赛历程，包含如何便捷使用Google Clob打比赛，租用服务器，训练参数配置等，参见Blog链接（后续补上）：
 
 ## Citation
-
-If you use this toolbox or benchmark in your research, please cite this project.
 
 ```
 @article{mmdetection,
