@@ -10,7 +10,7 @@ import cv2
 headers = ['name', 'image_id', 'confidence', 'xmin', 'ymin', 'xmax', 'ymax']
 class_name = ['holothurian', 'echinus', 'scallop', 'starfish']
 
-with open('result_pkl/cascade_x101_64x4d_fpn_1x.pkl', 'rb') as f:
+with open('result/cascade_x101_64x4d_fpn_1x.pkl', 'rb') as f:
     result_pkl = pk.load(f)
 with open('data/coco/annotations/testA.json', 'r') as js:
     json_file = json.load(js)
