@@ -8,16 +8,14 @@ from tqdm import tqdm
 headers = ['name', 'image_id', 'confidence', 'xmin', 'ymin', 'xmax', 'ymax']
 class_name = ['holothurian', 'echinus', 'scallop', 'starfish']
 
-with open('result_pkl/cascade_x101_64x4d_fpn_1x.pkl', 'rb') as f:
+with open('result/cascade_x101_64x4d_fpn_1x.pkl', 'rb') as f:
   result_pkl = pk.load(f)
 with open('annotations/testB.json', 'r') as js:
   json_file = json.load(js)
 image_list = json_file['images']
-# print(image_list,len(image_list))
+
 results = []
-# bboxes = []
-# scores = []
-# labels = []
+
 for k, res in enumerate(result_pkl):
   bboxes = np.vstack(res)
   labels = [
@@ -64,5 +62,5 @@ sub['ymin'] = ymin
 sub['xmax'] = xmax
 sub['ymax'] = ymax
 df = pandas.DataFrame(sub)
-df.to_csv("result_sub/sub_cascade_x101_64x4d_fpn_1x_B.csv", index=False, sep=',')
+df.to_csv("result_sub/sub_cascade_x101_64x4d_fpn_1x_B.csv", index=False, sep=',') # input your filename
 
