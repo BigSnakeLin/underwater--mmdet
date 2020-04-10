@@ -54,6 +54,8 @@ cascade_rcnn_hrnetv2p_w32.py-->线上最高map42+，
 	python tools/test.py waterconfigs/{your_config_file} {your_epoch_file} --out result/pkl_filename.pkl  
     python tools/pkl2sub.py
 
+## 这里贴出详细比赛历程，包含如何便捷使用Google Clob打比赛，租用服务器，训练参数配置等，参见Blog链接（后续补上）：
+
 ## Citation
 
 If you use this toolbox or benchmark in your research, please cite this project.
