@@ -57,7 +57,8 @@ cascade_rcnn_hrnetv2p_w32.py-->线上最高map42+，
 	python tools/pkl2vison.py # 将生成的可视化图片保存至result_vision文件夹下
 
 ## 模型结果融合方案
-**参考链接**：https://github.com/ZFTurbo/Weighted-Boxes-Fusion     
+**参考链接**：https://github.com/ZFTurbo/Weighted-Boxes-Fusion    
+
 	python tools/bbox2wbf2sub.py
 
 ## 这里贴出详细比赛历程，包含如何便捷使用Google Clob打比赛，租用服务器，训练参数配置等，参见Blog链接（后续补上）：
