@@ -19,7 +19,7 @@ image_list = json_file['images']
 results = []
 # print(len(result_pkl[:1][0]))
 for k, res in enumerate(result_pkl):
-    if image_list[k]['file_name'] in os.listdir('sample_result'):
+    if image_list[k]['file_name'] in os.listdir('sample_result'): # 创建一个sample_result文件，自行挑选一些图片放入进行可视化观察
         bboxes = np.vstack(res)
 
         labels = [
