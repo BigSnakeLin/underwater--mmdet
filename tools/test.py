@@ -162,6 +162,6 @@ def main():
             dataset.evaluate(outputs, args.eval, **kwargs)
 
         if args.json_out:
-            dataset.result2json(outputs, args.json_out, **kwargs)
+            dataset.results2json(outputs, args.json_out)
 if __name__ == '__main__':
     main()
