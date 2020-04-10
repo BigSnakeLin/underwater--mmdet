@@ -56,6 +56,10 @@ def parse_args():
         'useful when you want to format the result to a specific format and '
         'submit it to the test server')
     parser.add_argument(
+        '--json_out',
+        help='output result file name without extension',
+        type=str)
+    parser.add_argument(
         '--eval',
         type=str,
         nargs='+',
@@ -157,6 +161,7 @@ def main():
         if args.eval:
             dataset.evaluate(outputs, args.eval, **kwargs)
 
-
+        if args.json_out:
+            dataset.result2json(outputs, args.json_out, **kwargs)
 if __name__ == '__main__':
     main()
