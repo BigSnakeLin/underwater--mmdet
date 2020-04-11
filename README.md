@@ -44,7 +44,7 @@ cascade_rcnn_hrnetv2p_w32.py-->线上最高map42+，
 ## Generate Submission File
 **这里提供两种方法**：  
 
-  *1*.借鉴斩风大佬的转换方法：  
+  *1*.借鉴斩风大佬的转换方法：---> (https://github.com/zhengye1995/underwater-objection-detection) 
   首先产生一个测试集对应的testA.json文件，方便使用mmdet自带的测试管道进行测试，斩风大佬是产生一个json文件，命令如下：  
 
 	python tools/test.py waterconfigs/{your_config_file} {your_epoch_file} --json_out result/json_filename
